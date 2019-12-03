@@ -1,9 +1,10 @@
 import React from 'react';
+import Welcome from './Welcome';
 
 const Dashboard = () => {
   return (
     <div>
-      <h1>Enviro-History Dashboard</h1>
+      <Welcome />
     </div>
   );
 };
