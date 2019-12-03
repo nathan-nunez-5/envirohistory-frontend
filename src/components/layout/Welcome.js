@@ -2,6 +2,25 @@ import React from 'react';
 import TodayEvent from '../Misc/TodayEvent';
 
 const Welcome = () => {
+  const monthNames = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
+  const todaysDate = new Date();
+
+  const d = new Date();
+  document.write('The current month is ' + monthNames[d.getMonth()]);
+
   const data = [
     {
       img:
@@ -63,7 +82,9 @@ const Welcome = () => {
           <div>
             <h3 className="main-title">EnviroHistory</h3>
             <small className="main-question">What happened on...</small>
-            <h1 className="date-lg">November 21st</h1>
+            <h1 className="date-lg">
+              {monthNames[todaysDate.getMonth()]} {todaysDate.getDate()}
+            </h1>
           </div>
         </div>
       );
