@@ -2,14 +2,13 @@ import React from 'react';
 
 const SearchBar = () => {
   return (
-    <div id="namer">
-      <div id="namer-input">
-        <input
-          type="text"
-          name="namername"
-          placeholder="Type your name"
-        ></input>
-      </div>
+    <div className="input-group-text mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search..."
+        aria-describedby="basic-addon1"
+      ></input>
     </div>
   );
 };

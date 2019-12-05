@@ -1,9 +1,10 @@
 import React from 'react';
 import Selector from '../Misc/Selectors';
+import SearchResult from '../Misc/SearchResult';
+import SearchBar from '../Misc/SearchBar';
 
 const Search = () => {
   let results = [];
-  let variableSelectors = [];
 
   let data = [
     {
@@ -47,19 +48,7 @@ const Search = () => {
 
   /* Search cards */
   data.forEach((item) => {
-    results.push(
-      <div className="card result-card">
-        <h5 class="card-header">Featured</h5>
-        <div class="card-body">
-          <h5 class="card-title">{item.title}</h5>
-          <small>{item.year}</small>
-          <p class="card-text">{item.content}</p>
-          <a href="/res" class="btn btn-primary">
-            Learn More
-          </a>
-        </div>
-      </div>
-    );
+    results.push(<SearchResult result={item} />);
   });
 
   return (
@@ -81,14 +70,7 @@ const Search = () => {
       </div>
 
       <div id="results" className="col-9">
-        <div className="input-group-text mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Search..."
-            aria-describedby="basic-addon1"
-          ></input>
-        </div>
+        <SearchBar />
         {/* Card 1 */}
         {results}
       </div>
