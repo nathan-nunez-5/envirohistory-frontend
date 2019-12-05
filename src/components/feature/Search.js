@@ -1,7 +1,9 @@
 import React from 'react';
+import Selector from '../Misc/Selectors';
 
 const Search = () => {
   let results = [];
+  let variableSelectors = [];
 
   let data = [
     {
@@ -40,6 +42,10 @@ const Search = () => {
     }
   ];
 
+  let variables = ['Fire', 'Hurricane', 'Landslide', 'Tornado', 'Flood'];
+  let spatialCoverages = ['America', 'Japan', 'Indonesia'];
+
+  /* Search cards */
   data.forEach((item) => {
     results.push(
       <div className="card result-card">
@@ -60,13 +66,7 @@ const Search = () => {
     <div className="row">
       <div id="side-bar" className="col-3">
         {/* Variable */}
-        <h3>Variables</h3>
-        <select class="custom-select" id="inputGroupSelect01">
-          <option selected>Choose...</option>
-          <option value="1">Fire</option>
-          <option value="2">Hurricane</option>
-          <option value="3">Tornado</option>
-        </select>
+        <Selector title="Variables" optionNames={variables} />
         <hr></hr>
 
         {/* Spatial Coverage */}
@@ -76,21 +76,8 @@ const Search = () => {
           src="https://images.photowall.com/products/58350/new-york-map-bw.jpg"
           alt="map"
         ></img>
-        <select class="custom-select" id="inputGroupSelect01">
-          <option selected>Choose...</option>
-          <option value="1">America</option>
-          <option value="2">Japan</option>
-          <option value="3">Three</option>
-        </select>
-
+        <Selector title="Spatial Coverage" optionNames={spatialCoverages} />
         <hr></hr>
-        <h3>Spatial Resolution</h3>
-        <select class="custom-select" id="inputGroupSelect01">
-          <option selected>Choose...</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
       </div>
 
       <div id="results" className="col-9">
