@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
-const SearchBar = () => {
+import { submitSearch } from '../../actions/search';
+
+const SearchBar = ({ submitSearch }) => {
   const [formData, setFormData] = useState({
     searchQuery: ''
   });
@@ -13,7 +16,7 @@ const SearchBar = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log('Submitting: ', searchQuery);
+    submitSearch(searchQuery);
   };
 
   return (
@@ -38,4 +41,7 @@ const SearchBar = () => {
   );
 };
 
-export default SearchBar;
+export default connect(
+  null,
+  { submitSearch }
+)(SearchBar);
