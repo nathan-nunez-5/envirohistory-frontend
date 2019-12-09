@@ -9,6 +9,7 @@ export const submitSearch = (formData) => async (dispatch) => {
   };
 
   try {
+    console.log('Data:', formData);
     const res = await axios.post(
       'http://localhost:8000/api/search',
       formData,

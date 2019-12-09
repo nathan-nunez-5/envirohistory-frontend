@@ -16,7 +16,7 @@ const SearchBar = ({ submitSearch }) => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    submitSearch(searchQuery);
+    submitSearch({ searchQuery });
   };
 
   return (
