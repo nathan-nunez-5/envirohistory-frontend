@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import TodayEvent from '../Misc/TodayEvent';
 
-const Welcome = () => {
+import { connect } from 'react-redux';
+import { getTodaysInfo } from '../../actions/search';
+
+const Welcome = ({ getTodaysInfo, results }) => {
+  useEffect(() => {
+    getTodaysInfo();
+  }, [getTodaysInfo]);
+
+  console.log('Results:', results);
+
   const monthNames = [
     'January',
     'February',
@@ -110,4 +119,11 @@ const Welcome = () => {
   );
 };
 
-export default Welcome;
+const mapStateToProps = (state) => ({
+  results: state.results
+});
+
+export default connect(
+  mapStateToProps,
+  { getTodaysInfo }
+)(Welcome);

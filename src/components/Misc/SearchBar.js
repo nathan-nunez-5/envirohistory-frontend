@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { submitSearch } from '../../actions/search';
 
-const SearchBar = ({ submitSearch }) => {
+const SearchBar = ({ submitSearch, results }) => {
   const [formData, setFormData] = useState({
     searchQuery: ''
   });
@@ -41,7 +41,11 @@ const SearchBar = ({ submitSearch }) => {
   );
 };
 
+const mapStateToProps = (state) => ({
+  results: state.results
+});
+
 export default connect(
-  null,
+  mapStateToProps,
   { submitSearch }
 )(SearchBar);

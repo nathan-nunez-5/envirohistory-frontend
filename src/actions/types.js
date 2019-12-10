@@ -6,3 +6,4 @@ export const LOGOUT = 'LOGOUT';
 export const SEARCH_SUCCESS = 'SEARCH_SUCCESS';
 export const SEARCH_FAIL = 'SEARCH_FAIL';
 export const SUBMIT_SEARCH = 'SUBMIT_SEARCH';
+export const GET_TODAY = 'GET_TODAY';
