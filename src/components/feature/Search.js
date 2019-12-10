@@ -5,7 +5,7 @@ import SearchBar from '../Misc/SearchBar';
 
 import { connect } from 'react-redux';
 
-const Search = ({ results, loading }) => {
+const Search = ({ results }) => {
   let variables = ['Fire', 'Hurricane', 'Landslide', 'Tornado', 'Flood'];
   let spatialCoverages = ['America', 'Japan', 'Indonesia'];
 
@@ -51,7 +51,6 @@ const Search = ({ results, loading }) => {
 const mapStateToProps = (state) => {
   console.log(state);
   return {
-    loading: state.search.loading,
     results: state.search.results
   };
 };
