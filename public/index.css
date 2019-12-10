@@ -92,8 +92,12 @@ html {
 /* Dashboard */
 #side-bar {
   background-color: #e8e8e8;
-  height: 200vh;
+  /*
+  height: 100%;
+  */
+  margin-bottom: -1000px; /* any large number will do */
   padding: 30px;
+  padding-bottom: 1000px;
 }
 
 .result-card {
