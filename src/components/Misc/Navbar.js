@@ -11,9 +11,6 @@ const NavBar = () => {
           <a className="nav-link" href="/dashboard">
             History
           </a>
-          <a className="nav-link" href="/friends">
-            Friends
-          </a>
           <a className="nav-link" href="/search">
             Search
           </a>
