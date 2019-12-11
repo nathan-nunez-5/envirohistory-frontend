@@ -2,7 +2,7 @@ import React from 'react';
 
 const TodayEvent = ({ backgroundImage, title, description, size }) => {
   const classes = `portfolio-item ${size}`;
-
+  console.log(classes);
   return (
     <div
       className={classes}

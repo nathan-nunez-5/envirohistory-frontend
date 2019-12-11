@@ -22,16 +22,18 @@ function App() {
       <BrowserRouter>
         <div>
           <Navbar />
-          <Route path="/" exact component={Landing} />
-          <Switch>
-            <Route path="/dashboard" exact component={Dashboard} />
-            <Route path="/search" exact component={Search} />
-            <Route path="/friends" exact component={Friends} />
+          <div id="main">
+            <Route path="/" exact component={Landing} />
+            <Switch>
+              <Route path="/dashboard" exact component={Dashboard} />
+              <Route path="/search" exact component={Search} />
+              <Route path="/friends" exact component={Friends} />
 
-            {/* temp */}
-            <Route path="/res" exact component={SearchPage} />
-            <Route path="/profile" exact component={Profile} />
-          </Switch>
+              {/* temp */}
+              <Route path="/res" exact component={SearchPage} />
+              <Route path="/profile" exact component={Profile} />
+            </Switch>
+          </div>
         </div>
       </BrowserRouter>
     </Provider>

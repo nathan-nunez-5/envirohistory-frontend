@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Selector from '../Misc/Selectors';
 import SearchResult from '../Misc/SearchResult';
 import SearchBar from '../Misc/SearchBar';
+import MyMapComponent from '../Misc/Map';
 
 import { connect } from 'react-redux';
 
@@ -23,22 +24,24 @@ const Search = ({ results }) => {
   /* Search cards */
   return (
     <div className="row">
-      <div id="side-bar" className="col-3">
+      <div id="side-bar" className="col-lg-3 col-md-12 col-sm-12">
         {/* Variable */}
         <Selector title="Variables" optionNames={variables} />
         <hr></hr>
 
         {/* Spatial Coverage */}
-        <img
-          id="map-img"
-          src="https://images.photowall.com/products/58350/new-york-map-bw.jpg"
-          alt="map"
-        ></img>
+        <MyMapComponent
+          id="map-one"
+          isMarkerShown={true}
+          onMarkerClick={false}
+        />
+
+        <br></br>
         <Selector title="Spatial Coverage" optionNames={spatialCoverages} />
         <hr></hr>
       </div>
 
-      <div id="results" className="col-9">
+      <div id="results" className="col-lg-9 col-md-12">
         <SearchBar />
         {/* Card 1 */}
         {Cards}
