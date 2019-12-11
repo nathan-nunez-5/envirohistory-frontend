@@ -29,7 +29,6 @@ const Search = ({ results }) => {
         <hr></hr>
 
         {/* Spatial Coverage */}
-        <h3>Spatial coverage</h3>
         <img
           id="map-img"
           src="https://images.photowall.com/products/58350/new-york-map-bw.jpg"

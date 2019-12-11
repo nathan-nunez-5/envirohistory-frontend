@@ -7,7 +7,8 @@ const TodayEvent = ({ backgroundImage, title, description, size }) => {
     <div
       className={classes}
       style={{
-        backgroundImage: `url(${backgroundImage})`
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundSize: 'cover'
       }}
     >
       <div className="today-content">
